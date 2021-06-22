@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personage{% endblock %}
+	{% block stylesheets %}{% endblock %}
+
+{% block body %}
+	<h2 class="m-2 p-2 text-white text-center bg-primary rounded"> Personage {{ perso.pseudo }} </h2>
+	<div class="row">
+		<div class="col-2">
+			<img src="{{ asset('images/personnages/' ~ perso.pseudo ~ '.png') }}" alt="Personage"/>
+		</div>
+		<div class="col-3 mt-3 ml-4">
+			<h3>{{ perso.pseudo }}</h3>
+			<p>{{ perso.gender }}</p>
+			<h3>The Caracteristics</h3>	
+			<ul>
+				<li>Strengh : {{ perso.carac.strength }}</li>
+				<li>Agility : {{ perso.carac.agility }}</li>
+				<li>Intelligence : {{ perso.carac.intelligence }}</li>
+			</ul>	
+			
+		</div>
+	</div>
+	
+{% endblock %}
